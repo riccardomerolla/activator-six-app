@@ -1,0 +1,6 @@
+GET     /samples/:guid     controllers.Samples.getGuid(guid: String)
+
+#-----------------------------------
+# Custom routes                    |
+#-----------------------------------
+GET     /                           controllers.Application.index()

@@ -1,0 +1,28 @@
+{
+    "base_url": "http://localhost:9000",
+    "name": "Api Doc",
+    "description": "Host API documentation for REST services, and facilities design of resource first APIs.",
+    "models": {
+        "sample": {
+            "description": "A sample is a top level object.",
+            "fields": [
+                { "name": "guid", "type": "string", "description": "Internal unique identifier for this product." },
+                { "name": "name", "type": "string" }
+            ]
+        }
+    },
+    "resources": [
+        {
+            "model": "sample",
+            "operations": [
+                {
+                    "method": "GET",
+                    "path": "/:guid",
+                    "responses": {
+                        "200": { "type": "sample" }
+                    }
+                }
+            ]
+        }
+    ]
+}
